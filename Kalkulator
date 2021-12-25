@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a;
+    scanf("%f", &a);
+
+    while(1) {
+        char c;
+        float b;
+
+        scanf(" %c", &c);
+
+        if(c== '='){
+            break;
+        }
+
+        while(c!= '+' && c!='-' && c!='*' && c!='/') {
+            printf("Invalid operation\n");
+            scanf(" %c", &c);
+        }
+
+        scanf("%f", &b);
+
+        if(c=='+'){
+            a+=b;
+        }
+        else if(c == '-'){
+            a-=b;
+        }
+        else if(c == '*'){
+            a*=b;
+        }
+        else if(c == '/'){
+            while(b==0){
+                printf("Invalid number\n");
+                scanf("%f", &b);
+            }
+            a/=b;
+        }
+    }
+
+    printf("result: %f", a);
+}
