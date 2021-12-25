@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1589560535 source:d:\stuff\school\programming\9klas\test\zad1\main.c
+	<stdio.h>
+	<stdlib.h>
+
